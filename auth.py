@@ -1,9 +1,17 @@
 import streamlit as st
 
+try:
+    if 'appSecrets' in st.secrets:
+        # print(st.secrets['appSecrets'])
+        password = st.secrets['appSecrets']['password']
+        # print(password)
+except Exception as e:
+    st.error(f"Failed to authenticate with Earth Engine: {e}")
+    st.stop()
 # Dummy users dictionary
 USERS = {
-    "admin": "password123",
-    "user": "1234"
+    # "admin": "password123",
+    "user": password
 }
 
 def login():
