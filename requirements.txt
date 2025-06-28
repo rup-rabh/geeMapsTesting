@@ -5,4 +5,5 @@ geemap==0.35.3
 pandas==2.2.3
 streamlit==1.45.1
 streamlit-folium==0.17.1
+setuptools>=65.0.0
 
