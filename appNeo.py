@@ -19,14 +19,15 @@ try:
         service_account_info = st.secrets['credentials']
         credentials = ee.ServiceAccountCredentials(
             service_account_info['client_email'], 
-            key_data=json.dumps(service_account_info)
+            key_data=json.dumps(dict(service_account_info))  # Convert AttrDict to dict
         )
         ee.Initialize(credentials)
     else:
-        geemap.ee_initialize()  # Fallback for local development
+        geemap.ee_initialize()
 except Exception as e:
     st.error(f"Failed to authenticate with Earth Engine: {e}")
     st.stop()
+
 
 
 
