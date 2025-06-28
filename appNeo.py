@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import ee
 import geemap.foliumap as geemap
-import numpy as np
+# import numpy as np
 from auth import login
 import json
 
