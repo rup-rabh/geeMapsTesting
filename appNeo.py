@@ -383,12 +383,14 @@ def main():
     
     # Create tabs
     tab1, tab2 = st.tabs(["🌱 Enhanced Vegetation Analysis", "🛣️ Runway Analysis"])
+    # tab1 = st.tabs(["🌱 Enhanced Vegetation Analysis"])
     
     with tab1:
         enhanced_vegetation_analysis_tab()
     
     with tab2:
         runway_analysis_tab()
+    # enhanced_vegetation_analysis_tab()
 
 if __name__ == "__main__":
     main()
